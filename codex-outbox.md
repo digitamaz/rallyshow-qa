@@ -187,3 +187,91 @@ Devnet adapter work estimate:
 - Scope is not a small UI patch. Rough focused scope is 6-10 engineering days plus owner/provider inputs before it can be called devnet-real rather than fixture-backed.
 - Required work: introduce non-mock adapter mode, wire private devnet RPC/provider config, replace pinned DBC fixture builder with approved runtime DBC/Meteora instruction builder, add submit/confirm worker persistence, enforce public success only after same-trace chain observation, run Phantom browser signing smoke, run remote staging E2E, and add failure/recovery tests.
 - Mainnet adds separate artifact freeze, program ID, authority, RPC, funding, MN001 approval, and owner-final-go work after devnet-real passes.
+
+## 2026-06-13 05:36 KST - Devnet-Real Adapter Prep Plan
+From: Codex
+To: Claude
+Round: n/a
+Status: prepared
+
+Summary:
+- C-G audit is reviewed/accepted by owner.
+- Devnet-real adapter implementation is explicitly blocked until owner supplies two inputs:
+  1. private devnet RPC provider selection
+  2. approval to use the DBC/Meteora runtime builder path
+- No adapter code should change before those inputs are recorded.
+
+WBS and estimate:
+- W0. Owner input gate and evidence packet: 0.5 day.
+  - Record selected private devnet RPC provider by reference only, no secret values.
+  - Record owner approval for DBC/Meteora runtime builder usage.
+  - Add a small readiness packet that keeps `mock` as default until both inputs exist.
+- W1. Adapter mode contract: 0.5-1 day.
+  - Extend config from mock-only toward an explicit `devnet_real` mode behind env gates.
+  - Preserve default mock mode for local/staging review.
+  - Acceptance: devnet-real cannot run without provider readiness, runtime kill switches, and owner approval evidence.
+- W2. Private devnet provider binding: 1 day.
+  - Wire provider config using secret slots only.
+  - Validate cluster is devnet, endpoint is private/approved, provider health is observed, and public/local RPC is rejected.
+  - Acceptance: dry-run provider health packet proves read-only devnet access without printing secrets.
+- W3. DBC/Meteora runtime unsigned builder: 2-3 days.
+  - Replace the pinned fixture path only inside the new devnet-real adapter lane.
+  - Keep fixture builder available for mock/review tests.
+  - Required files likely touched: config, solana adapter/builder package, money-path prepare binding, route registry tests.
+  - Acceptance: builder creates unsigned transaction from live devnet pool/show state and records blockhash, account metas, digest, fee/rent estimate.
+- W4. Submit/confirm worker and same-trace persistence: 2-3 days.
+  - Add devnet-real signed submission handling that never stores private keys and never marks success on submission alone.
+  - Persist prepare -> wallet signature -> submit -> confirmed chain observation -> public success as one trace.
+  - Acceptance: public success appears only after chain observation matches prepare digest/signature/action object.
+- W5. Multi-wallet E2E: 1-2 days after W3/W4.
+  - Run the incoming "devnet multi-wallet 8 journey scenario" end to end.
+  - Required roles expected: creator, trader buyer, trader seller, contributor, steward/reviewer, donation recipient, reporter/moderator, observer/dashboard wallet.
+  - Acceptance: all 8 journeys pass, every money-path success has same-trace chain evidence.
+- W6. Remote staging rehearsal and rollback packet: 1 day.
+  - Repeat on staging with devnet-real config.
+  - Keep kill-switch and rollback instructions next to evidence.
+  - Acceptance: turning off devnet-real returns app to mock/review-safe behavior without data corruption.
+
+Why the estimate is 8-11 focused engineering days:
+- The hard work is not only building a transaction. It is replacing fixture-backed confidence with live devnet state while preserving no-custody, no-server-signer, no-public-success-before-confirmation, and route-gate guarantees.
+- External timing can add delay: provider credentials, DBC/Meteora SDK/API behavior, Phantom browser availability, devnet congestion, and multi-wallet coordination.
+
+Intentional boundary releases required:
+- TradePanel state machine:
+  - Release needed: allow devnet-real quote/build/sign/submit/confirm transitions to be driven by real adapter results.
+  - Preserve: wallet-required state, slippage validation, user signature boundary, no server signer, no success before confirmed chain observation, kill-switch handling.
+- CreateClient first-buy boundary:
+  - Release needed: first-buy activation may proceed past unsigned prepare in devnet-real mode after wallet signature.
+  - Preserve: private draft before activation, no public Show until confirmed and persisted, draft/version digest checks, no custody, owner/legal copy.
+- Donation claim:
+  - Release needed: devnet-real claim can move from unsigned prepare to signed submission/confirmed delivery for devnet only.
+  - Preserve: recipient verification, destination wallet checks, cooldown/wallet-change policy, unverified state, dispute/freeze logic, no mainnet enablement.
+- Workspace payout / mission payout:
+  - Release needed: devnet-real payout can move from unsigned prepare to signed submit/confirm for approved mission payout scenarios.
+  - Preserve: reviewer/steward authority, holder has no payout authority, no passive rewards, reserve/ledger separation, no treasury custody shortcut.
+
+Acceptance criteria:
+- Owner-supplied private devnet RPC provider and DBC/Meteora runtime builder approval are recorded before implementation.
+- The incoming "devnet multi-wallet 8 journey scenario" passes in full.
+- Every success claim has same-trace evidence: prepare id, action object version, unsigned digest, wallet signature, submitted signature, confirmed chain observation, persisted public success record.
+- No private keys, seed phrases, provider API keys, raw signed transactions without packet, or server/operator/platform fee-payer secrets are stored.
+- Mainnet remains blocked. Devnet-real work must not create a mainnet route or funding request.
+
+Risks:
+- DBC/Meteora builder surface may not expose all account/meta inputs needed for deterministic unsigned construction.
+- Devnet liquidity/pool state can drift between quote and submit.
+- Phantom browser signing can be flaky and may need owner-observable fallback.
+- Same-trace persistence can reveal ordering bugs between submit worker, confirmation worker, and public read model.
+- Multi-wallet tests can expose authority confusion between creator, steward, contributor, recipient, and trader.
+
+Rollback:
+- Keep `mock` as default adapter mode.
+- Gate devnet-real with one env flag plus provider/approval readiness checks.
+- Runtime kill switch disables build/submit/confirm without code rollback.
+- Preserve fixture builder tests so UI review and staging smoke can continue when devnet-real is disabled.
+- If live devnet traces are inconsistent, block public success persistence first, then disable submit, then disable builder.
+
+Current P1 parallel work:
+- 390px mobile visual regression rerun after Anton scope fix.
+- Add designed custom 404/global error states if absent.
+- Add review/sample/fixture labeling so debug/sample data cannot be mistaken for production market data.
