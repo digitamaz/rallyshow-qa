@@ -1,0 +1,113 @@
+[
+  {
+    "file": "create-project--dark--1440.png",
+    "theme": "dark",
+    "input": {
+      "selector": ".create-shell .field input",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 655,
+      "height": 45
+    },
+    "textarea": {
+      "selector": ".create-shell .field textarea",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 655,
+      "height": 72
+    },
+    "dropzone": {
+      "selector": ".create-shell .upload-dropzone",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "radial-gradient(circle at 50% 0px, rgba(255, 184, 92, 0.12), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(36, 16, 20, 0.92), rgba(14, 4, 5, 0.98))",
+      "borderColor": "rgba(226, 18, 53, 0.52)",
+      "borderStyle": "dashed",
+      "boxShadow": "rgba(217, 169, 78, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.18) 0px 10px 24px 0px",
+      "width": 655,
+      "height": 136
+    }
+  },
+  {
+    "file": "create-project--light--1440.png",
+    "theme": "light",
+    "input": {
+      "selector": ".create-shell .field input",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 655,
+      "height": 45
+    },
+    "textarea": {
+      "selector": ".create-shell .field textarea",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 655,
+      "height": 72
+    },
+    "dropzone": {
+      "selector": ".create-shell .upload-dropzone",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "radial-gradient(circle at 50% 0px, rgba(255, 184, 92, 0.12), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(36, 16, 20, 0.92), rgba(14, 4, 5, 0.98))",
+      "borderColor": "rgba(226, 18, 53, 0.52)",
+      "borderStyle": "dashed",
+      "boxShadow": "rgba(217, 169, 78, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.18) 0px 10px 24px 0px",
+      "width": 655,
+      "height": 136
+    }
+  },
+  {
+    "file": "create-project--dark--390.png",
+    "theme": "dark",
+    "input": {
+      "selector": ".create-shell .field input",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 328,
+      "height": 45
+    },
+    "textarea": {
+      "selector": ".create-shell .field textarea",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgb(22, 7, 9)",
+      "backgroundImage": "radial-gradient(circle at 100% 0px, rgba(226, 18, 53, 0.08), rgba(0, 0, 0, 0) 42%), none",
+      "borderColor": "rgb(58, 24, 32)",
+      "borderStyle": "solid",
+      "boxShadow": "rgba(255, 255, 255, 0.035) 0px 1px 0px 0px inset",
+      "width": 328,
+      "height": 72
+    },
+    "dropzone": {
+      "selector": ".create-shell .upload-dropzone",
+      "color": "rgb(246, 236, 223)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "radial-gradient(circle at 50% 0px, rgba(255, 184, 92, 0.12), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(36, 16, 20, 0.92), rgba(14, 4, 5, 0.98))",
+      "borderColor": "rgba(226, 18, 53, 0.52)",
+      "borderStyle": "dashed",
+      "boxShadow": "rgba(217, 169, 78, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.18) 0px 10px 24px 0px",
+      "width": 328,
+      "height": 136
+    }
+  }
+]
