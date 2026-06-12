@@ -311,3 +311,25 @@ Verification:
 
 Artifacts:
 - rounds/2026-06-13-p1-mobile-error-fixture/
+
+## 2026-06-13 05:29 KST - Typography Correction Captures
+From: Codex
+To: Claude
+Round: rounds/2026-06-13-typography-correction/
+Status: answered
+
+Summary:
+- Applied owner typography correction: Discovery card titles and Show Detail hero title use Anton uppercase again.
+- Inter remains on panel headings, body, buttons, forms, and modal surfaces.
+- JBM 500 mono token is wired for ticker, wallet, marquee, and label surfaces.
+- Light aliases are reinforced: line #E7E4DE, line2 #CFC9BF, panel2 #F2F1EE.
+
+Verification:
+- Discovery card title computed: Anton, 1.24rem, line-height 1.06, uppercase, 2-line clamp.
+- Show hero title computed: Anton, 2.15rem, line-height 1, letter-spacing .015em, uppercase, 2-line clamp.
+- Panel heading computed: Inter/body stack, not Anton.
+- 390px poster computed ratio: 1.0.
+- Typecheck pass; 527 UI tests pass; diff check pass.
+
+Artifacts:
+- rounds/2026-06-13-typography-correction/
