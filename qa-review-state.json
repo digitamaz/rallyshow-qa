@@ -1,0 +1,7 @@
+{
+  "reviewedAt": "2026-06-13T04:18:00+09:00",
+  "reviewedBy": "claude_explicit_review_complete",
+  "reviewedGitCommit": "f296ed2",
+  "reviewedOutboxSha256": "1c532e9dfb6aa7661442c1504500da916edaff842c8fcc2bec1245b859d14229",
+  "pendingNote": "C-G audit submission at 32520c9 is intentionally pending Claude review; --close must block until --mark-reviewed is run after explicit review completion."
+}

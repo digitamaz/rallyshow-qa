@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import { basename, extname, join, relative, resolve } from "node:path";
 
 const args = parseArgs(process.argv.slice(2));
+const OUTBOX_PATH = "codex-outbox.md";
+const REVIEW_STATE_PATH = "qa-review-state.json";
 const scanDenylist = [
   { id: "telegram_bot_token", pattern: /[0-9]{6,}:[A-Za-z0-9_-]{20,}/ },
   { id: "github_token", pattern: /(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})/ },
@@ -32,7 +35,14 @@ async function main() {
     return;
   }
 
+  if (args.markReviewed) {
+    await assertSensitiveScanClean();
+    await markOutboxReviewed();
+    return;
+  }
+
   if (args.close) {
+    await assertCloseAllowed();
     editVisibility("private");
     return;
   }
@@ -112,6 +122,50 @@ function commitAndPush(round, count) {
   run("git", ["commit", "-m", `Add QA round ${round} (${count} screenshots)`]);
   run("git", ["push", "origin", "HEAD"]);
   console.log(`qa_round_pushed round=${round}`);
+}
+
+async function assertCloseAllowed() {
+  const currentHash = await hashFile(OUTBOX_PATH);
+  const state = await readReviewState();
+  if (!state.reviewedOutboxSha256) {
+    throw new Error(
+      `qa_close_blocked review_state_missing; run --mark-reviewed only after explicit Claude review complete`
+    );
+  }
+  if (state.reviewedOutboxSha256 !== currentHash) {
+    throw new Error(
+      `qa_close_blocked unreviewed_outbox_submissions_detected; run --mark-reviewed only after explicit Claude review complete`
+    );
+  }
+}
+
+async function markOutboxReviewed() {
+  const reviewedOutboxSha256 = await hashFile(OUTBOX_PATH);
+  const reviewedGitCommit = currentGitCommit();
+  const reviewedAt = new Date().toISOString();
+  const state = {
+    reviewedAt,
+    reviewedBy: "claude_explicit_review_complete",
+    reviewedGitCommit,
+    reviewedOutboxSha256,
+    closePolicy:
+      "--close is allowed only when codex-outbox.md matches this reviewedOutboxSha256."
+  };
+  await writeFile(REVIEW_STATE_PATH, `${JSON.stringify(state, null, 2)}\n`, "utf8");
+  console.log(`qa_review_state_updated commit=${reviewedGitCommit}`);
+}
+
+async function readReviewState() {
+  try {
+    return JSON.parse(await readFile(REVIEW_STATE_PATH, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+async function hashFile(path) {
+  const content = await readFile(path);
+  return createHash("sha256").update(content).digest("hex");
 }
 
 async function assertSensitiveScanClean() {
@@ -194,6 +248,18 @@ function currentRepoSlug() {
   return slug;
 }
 
+function currentGitCommit() {
+  const result = spawnSync("git", ["rev-parse", "--short", "HEAD"], {
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"]
+  });
+  const commit = result.stdout.trim();
+  if (result.status !== 0 || !commit) {
+    throw new Error("git commit lookup failed");
+  }
+  return commit;
+}
+
 function run(command, argv) {
   const result = spawnSync(command, argv, { stdio: "inherit" });
   if (result.status !== 0) {
@@ -210,7 +276,8 @@ function parseArgs(argv) {
     keepManifest: false,
     scanOnly: false,
     publish: false,
-    close: false
+    close: false,
+    markReviewed: false
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -231,6 +298,8 @@ function parseArgs(argv) {
       result.publish = true;
     } else if (item === "--close") {
       result.close = true;
+    } else if (item === "--mark-reviewed") {
+      result.markReviewed = true;
     }
   }
 
@@ -246,6 +315,7 @@ function usage() {
 node scripts/import-round.mjs --source <png-directory> --round <date-round> [--push] [--replace]
 node scripts/import-round.mjs --scan-only
 node scripts/import-round.mjs --publish
+node scripts/import-round.mjs --mark-reviewed
 node scripts/import-round.mjs --close
 
 Example:
