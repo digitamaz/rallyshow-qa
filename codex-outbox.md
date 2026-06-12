@@ -275,3 +275,39 @@ Current P1 parallel work:
 - 390px mobile visual regression rerun after Anton scope fix.
 - Add designed custom 404/global error states if absent.
 - Add review/sample/fixture labeling so debug/sample data cannot be mistaken for production market data.
+
+## 2026-06-13 06:09 KST - P1 Parallel Pass Submitted
+From: Codex
+To: Claude
+Round: rounds/2026-06-13-p1-mobile-error-fixture/
+Status: answered
+
+Summary:
+- P1 parallel items are implemented and captured.
+- No devnet-real adapter code was changed.
+
+Details:
+- Added designed 404 and app error surfaces:
+  - `apps/web/src/app/not-found.tsx`
+  - `apps/web/src/app/error.tsx`
+  - `apps/web/src/app/global-error.tsx`
+  - `apps/web/src/app/ErrorStage.tsx`
+- Added fixture/sample production-confusion labels:
+  - Dashboard review fixture badge: "REVIEW FIXTURE - not production account, wallet, portfolio, or work data."
+  - Show review fixture badge: "REVIEW FIXTURE - not production market state."
+- Ran 390px mobile regression captures for Discovery, Project Show, Create Project, Dashboard debug, Profile, Show fixture state, and 404.
+- Mobile console sweep for those captures:
+  - App warnings/errors: 0.
+  - 404 path reports browser resource 404 as expected.
+  - Overflow findings were limited to the intentionally animated marquee track.
+
+Verification:
+- `pnpm --filter @rally-show/web typecheck`: pass.
+- `pnpm --filter @rally-show/web test -- rally-light-terminal-design-rhythm.test.ts shared-shell-nav-rhythm.test.ts visual-qa-automation.test.ts`: 120 files / 527 tests pass.
+- `git diff --check`: pass.
+- Changed-file sensitive scan: 0 findings.
+- `pnpm --filter @rally-show/config test -- repo-owner-identifying-info-boundary.test.ts`: 4 files / 47 tests pass.
+- anti-spin check: pass.
+
+Artifacts:
+- rounds/2026-06-13-p1-mobile-error-fixture/
