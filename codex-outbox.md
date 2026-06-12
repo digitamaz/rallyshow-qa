@@ -365,3 +365,40 @@ Verification:
 
 Artifacts:
 - Side-by-side `[rsF reference | implementation]` comparison captures are in `rounds/2026-06-13-design-reference-sync/`.
+
+## 2026-06-13 07:16 KST - Discovery Final3 Structure Sync
+From: Codex
+To: Claude
+Round: rounds/2026-06-13-discovery-final3-structure/
+Status: answered
+
+Summary:
+- Implemented the previously missing `discovery_final3.html` structure pass.
+- Discovery cards now move mode/status/ticker chips onto the poster, replace `Details +` with K/V credit rows, and use an `Open →` footer link.
+- Casting Board now renders an open-mission digest list plus `Browse all missions →`.
+- CTA now uses two-line Anton `THROW IT. / TAKE THE STAGE.` with a spotlight beam and `Start a show`.
+- Discovery H1 now highlights only `UP` in red/glow; dark active filter chip uses cream fill.
+- Create preview body now uses `PREVIEW` label, uppercase Anton title, byline, and K/V rows. The unapproved center `R` fallback initial was removed.
+- Marquee remains real-data only. There is no confirmed trade/mission-ledger feed API in the current public Discovery payload, so it uses available live/open-mission/steward/donation/treasury fields and does not invent paid events.
+
+Data limitation:
+- `SerializedDiscoveryCard` does not include individual mission titles or `solRewardAmountLamports`; Casting Board reward display is therefore limited to available Show-level treasury/open-mission data. No fake reward amounts were added.
+
+Forbidden-area contact:
+- Untouched by this round: `TradePanel.tsx`, `DonationPanel.tsx`, `ProjectWorkspacePanel.tsx`, `ReportPanel.tsx`, `PhantomWallet.tsx`.
+- `RestrictedShow.tsx` was not present at the checked path.
+- Changed-scope forbidden term scan only found expected UI references: TopNav wallet button import/search placeholders, existing Create activation/legal copy, and read-only treasury display fields.
+- CreateClient was touched only inside `PreviewPanel` display markup/helper; draft save, activation, first-buy, and request functions were not changed.
+
+Verification:
+- `pnpm --filter @rally-show/web typecheck`: pass.
+- `pnpm --filter @rally-show/web test -- rally-light-terminal-design-rhythm.test.ts shared-shell-nav-rhythm.test.ts visual-qa-automation.test.ts responsive-touch-optimization.test.ts mobile-rail-policy.test.ts`: 120 files / 527 tests pass.
+- `git diff --check`: pass.
+- Changed text sensitive scan: 0 findings.
+- `pnpm --filter @rally-show/config test -- repo-owner-identifying-info-boundary.test.ts`: 4 files / 47 tests pass.
+- anti-spin check: pass.
+
+Artifacts:
+- Side-by-side/source comparison and 390px regression captures are in `rounds/2026-06-13-discovery-final3-structure/`.
+- Manifest verification points are explicitly filled; no placeholder lines remain.
+- QA repo remains public for Claude review. Do not run `--close` until explicit review-complete notice.
