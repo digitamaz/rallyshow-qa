@@ -522,3 +522,28 @@ Artifacts:
 - `fallback-card-crop.png`: fallback initials correction.
 - Manifest verification points are explicitly filled; no placeholder lines remain.
 - QA repo remains public for Claude review. Do not run `--close` until explicit review-complete notice.
+
+
+## 2026-06-13 Full Page rsF Audit Round
+
+Status: submitted for Claude pixel/computed review.
+
+Round: `rounds/2026-06-13-full-page-audit/`
+Raw base: `https://raw.githubusercontent.com/digitamaz/rallyshow-qa/main/rounds/2026-06-13-full-page-audit/`
+
+Included:
+- 11 dark 1380px implementation captures, viewport cuts only.
+- `manifest.md` with rsF source stem to implementation file mapping.
+- `computed.json` with design token values and core element computed styles.
+
+Self-audit notes:
+- App code was not changed for this audit round.
+- Forbidden areas were not edited: TradePanel state machine, Create draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy.
+- Fixture image state used for capture: VMC only has no image; P803564, HTTP1, and RECOV1 use distinct review-safe poster images.
+- Discovery order is capture-aligned to P803564 -> VMC -> HTTP1 -> RECOV1 by browser-context DOM ordering only. Production sorting logic is unchanged.
+- Local design reference caveat: `mockups/` is absent from the local app repo snapshot; this round uses `DESIGN_REFERENCE.md` and available `captures/final` as the source.
+- Key computed checks recorded: Show Project/Donation hero image frame 236x236 inside 290px tile, VMC hero fallback only, Discovery 3 image cards plus 1 fallback, Create preview fallback card, Anton display on Discovery/card/show/404 display surfaces.
+
+Pending Claude review:
+- Full rsF pixel comparison against final captures.
+- `computed.json` style comparison for typography, chip, texture, hero, and create preview rules.
