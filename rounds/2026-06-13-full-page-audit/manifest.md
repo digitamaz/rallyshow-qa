@@ -15,7 +15,7 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 | Interaction state | Rest state, no hover/focus |
 | Discovery fixture order | P803564 -> VMC -> HTTP1 -> RECOV1 |
 | Fixture image policy | VMC image is null; P803564, HTTP1, RECOV1 use distinct review-safe posters |
-| App logic | No app logic or forbidden money-path code changed for this round |
+| App logic | No production sorting, money-path, wallet, donation, or workspace logic changed for this round |
 
 ## Source-to-Implementation Mapping
 
@@ -33,14 +33,17 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 | `rsF-terms.png` | `terms--impl.png` |
 | `rsF-404.png` | `404--impl.png` |
 
-## Included Files
+## Delta Fixes in This Revision
 
-- 11 implementation PNGs named as requested
-- `computed.json` with core token and element computed styles
+| Area | Change | Verification point |
+| --- | --- | --- |
+| Protocol | Added permanent QA evidence protocol to `AGENTS.md` | Future rounds require QA repo push, manifest, raw path, measured evidence, and no close before review pass |
+| Section H1 typography | Search, Dashboard, Profile, Terms page-level section H1s use Anton uppercase | `computed.json` font family and text transform |
+| Dashboard H1 emphasis | `AND WORK` is red with red glow | `dashboard--impl.png` and computed span color |
+| Fixture images | P803564, HTTP1, RECOV1 retain review-safe poster images; VMC remains image-null | `computed.json` image/fallback audit signals |
+| Show mode chip | Show Detail hero mode chip renders uppercase JetBrains Mono and brass fill | `show-project--impl.png` and computed mode chip styles |
+| Search utility link | Search `Clear search` uses gold token family | `search--impl.png` and computed link color |
 
-## Verification Notes
+## Forbidden-Area Contact Check
 
-- Show Project and Donation hero poster metrics in `computed.json`: poster tile 290px wide, image frame 236x236, right curtain rail separate, lightbox trigger 32px.
-- Show Meme uses VMC with image-null fallback; Project and Donation render image posters.
-- Discovery first row is capture-aligned to P803564, VMC, HTTP1, RECOV1 by DOM ordering in the browser context only. The app's production sorting logic was not changed.
-- No private wallet string, token, endpoint, or local path is intentionally included in this packet.
+No forbidden logic files were intentionally edited. Touched app files are limited to `AGENTS.md`, Search/Dashboard/Show Detail presentational markup, and CSS for Discovery/Dashboard/Profile/Terms/Show styling. TradePanel state machine, Create draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy were not changed.

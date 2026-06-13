@@ -547,3 +547,32 @@ Self-audit notes:
 Pending Claude review:
 - Full rsF pixel comparison against final captures.
 - `computed.json` style comparison for typography, chip, texture, hero, and create preview rules.
+
+
+## 2026-06-13 Full Page rsF Audit Round — Delta Fix 01
+
+Status: updated for Claude pixel/computed review after 11-page full comparison.
+
+Round: `rounds/2026-06-13-full-page-audit/`
+Raw base: `https://raw.githubusercontent.com/digitamaz/rallyshow-qa/main/rounds/2026-06-13-full-page-audit/`
+
+Changes applied:
+- `AGENTS.md`: added permanent QA evidence protocol. Completion evidence now requires QA repo round push, raw base path, manifest, measurable artifact, and no `--close` before explicit review pass.
+- `apps/web/src/app/search/page.tsx`: Search page section title changed from `h2` to page-level `h1` for rsF section H1 typography.
+- `apps/web/src/app/dashboard/page.tsx`: Dashboard H1 wraps `and work` for red emphasis.
+- `apps/web/src/app/show/[showId]/page.tsx`: Show Detail mode chip text now renders uppercase.
+- CSS styling deltas: Discovery/Search section H1 + Clear search gold, Dashboard/Profile/Terms H1 Anton uppercase, Show Detail mode chip JBM uppercase/brass.
+
+Verification evidence:
+- `pnpm --filter @rally-show/web typecheck` passed.
+- `computed.json` confirms Search/Dashboard/Profile/Terms H1 font-family includes Anton and `text-transform: uppercase`.
+- `computed.json` confirms Dashboard H1 span color `rgb(226, 18, 53)`.
+- `computed.json` confirms Show Project mode chip uses JetBrains Mono, uppercase, brass fill.
+- `computed.json` confirms Show Project hero image exists with 236x236 frame and `object-fit: cover`.
+- `computed.json` confirms Search result cards have 3 image posters and no fallback for those results.
+- Discovery audit signals remain P803564 -> VMC -> HTTP1 -> RECOV1 with 3 image cards and 1 fallback.
+
+Forbidden-area contact check:
+- No forbidden logic components were edited.
+- Expected grep references only: `show/[showId]/page.tsx` still imports TradePanel, DonationPanel, ProjectWorkspacePanel, ReportPanel, and RestrictedShow, but the only markup change there is the mode-chip display text. `show.css` still contains existing mission-claim style selectors; no mission, donation, wallet, trade, workspace, or report logic changed.
+- CreateClient and TradePanel files were not edited.

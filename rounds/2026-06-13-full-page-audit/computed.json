@@ -878,8 +878,40 @@
             "transform": "none",
             "position": "static"
           },
-          ".open-link": {
-            "found": false
+          ".card-open-row a": {
+            "found": true,
+            "pseudo": null,
+            "rect": {
+              "x": 316.73,
+              "y": 683.31,
+              "width": 50.27,
+              "height": 18.67
+            },
+            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "12.8px",
+            "lineHeight": "18.688px",
+            "fontWeight": "900",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "color": "rgb(255, 245, 226)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "borderTopColor": "rgb(255, 245, 226)",
+            "borderTopWidth": "0px",
+            "borderRightColor": "rgb(255, 245, 226)",
+            "borderBottomColor": "rgb(255, 245, 226)",
+            "borderLeftColor": "rgb(255, 245, 226)",
+            "borderRadius": "6px",
+            "boxShadow": "none",
+            "width": "50.2656px",
+            "height": "18.6719px",
+            "display": "block",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "objectFit": "fill",
+            "opacity": "1",
+            "transform": "none",
+            "position": "static"
           },
           ".ticker-mark": {
             "found": true,
@@ -1349,6 +1381,7 @@
         ],
         "tickerMarksWithImage": 3,
         "tickerMarksFallback": 1,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -1990,7 +2023,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 208.88,
+              "y": 204.67,
               "width": 632,
               "height": 34.41
             },
@@ -2025,16 +2058,16 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 171.98,
-              "width": 97.94,
-              "height": 24.89
+              "y": 176.19,
+              "width": 87.72,
+              "height": 16.48
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
-            "fontSize": "15.68px",
-            "lineHeight": "22.8928px",
-            "fontWeight": "500",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "fontFamily": "\"JetBrains Mono\", \"SF Mono\", \"Roboto Mono\", ui-monospace, Menlo, Consolas, monospace",
+            "fontSize": "9.92px",
+            "lineHeight": "14.4832px",
+            "fontWeight": "700",
+            "letterSpacing": "1.1904px",
+            "textTransform": "uppercase",
             "color": "rgb(18, 6, 8)",
             "backgroundColor": "rgb(217, 169, 78)",
             "backgroundImage": "none",
@@ -2045,8 +2078,8 @@
             "borderLeftColor": "rgba(217, 169, 78, 0.88)",
             "borderRadius": "0px",
             "boxShadow": "rgba(255, 245, 226, 0.28) 0px 1px 0px 0px inset",
-            "width": "97.9375px",
-            "height": "24.8906px",
+            "width": "87.7188px",
+            "height": "16.4844px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -2060,7 +2093,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 241.8,
               "height": 26
             },
@@ -2095,7 +2128,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 81.92,
               "height": 26
             },
@@ -2130,7 +2163,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 293.28,
+              "y": 289.08,
               "width": 632,
               "height": 22.72
             },
@@ -2734,6 +2767,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": true,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -3372,7 +3406,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 208.88,
+              "y": 204.67,
               "width": 632,
               "height": 34.41
             },
@@ -3407,16 +3441,16 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 171.98,
-              "width": 116.61,
-              "height": 24.89
+              "y": 176.19,
+              "width": 94.86,
+              "height": 16.48
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
-            "fontSize": "15.68px",
-            "lineHeight": "22.8928px",
-            "fontWeight": "500",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "fontFamily": "\"JetBrains Mono\", \"SF Mono\", \"Roboto Mono\", ui-monospace, Menlo, Consolas, monospace",
+            "fontSize": "9.92px",
+            "lineHeight": "14.4832px",
+            "fontWeight": "700",
+            "letterSpacing": "1.1904px",
+            "textTransform": "uppercase",
             "color": "rgb(18, 6, 8)",
             "backgroundColor": "rgb(217, 169, 78)",
             "backgroundImage": "none",
@@ -3427,8 +3461,8 @@
             "borderLeftColor": "rgba(217, 169, 78, 0.88)",
             "borderRadius": "0px",
             "boxShadow": "rgba(255, 245, 226, 0.28) 0px 1px 0px 0px inset",
-            "width": "116.609px",
-            "height": "24.8906px",
+            "width": "94.8594px",
+            "height": "16.4844px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -3442,7 +3476,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 232.69,
               "height": 26
             },
@@ -3477,7 +3511,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 74.44,
               "height": 26
             },
@@ -3512,7 +3546,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 293.28,
+              "y": 289.08,
               "width": 632,
               "height": 22.72
             },
@@ -4084,6 +4118,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": true,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -4722,7 +4757,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 208.88,
+              "y": 204.67,
               "width": 632,
               "height": 34.41
             },
@@ -4757,16 +4792,16 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 171.98,
-              "width": 91.05,
-              "height": 24.89
+              "y": 176.19,
+              "width": 66.3,
+              "height": 16.48
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
-            "fontSize": "15.68px",
-            "lineHeight": "22.8928px",
-            "fontWeight": "500",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "fontFamily": "\"JetBrains Mono\", \"SF Mono\", \"Roboto Mono\", ui-monospace, Menlo, Consolas, monospace",
+            "fontSize": "9.92px",
+            "lineHeight": "14.4832px",
+            "fontWeight": "700",
+            "letterSpacing": "1.1904px",
+            "textTransform": "uppercase",
             "color": "rgb(18, 6, 8)",
             "backgroundColor": "rgb(217, 169, 78)",
             "backgroundImage": "none",
@@ -4777,8 +4812,8 @@
             "borderLeftColor": "rgba(217, 169, 78, 0.88)",
             "borderRadius": "0px",
             "boxShadow": "rgba(255, 245, 226, 0.28) 0px 1px 0px 0px inset",
-            "width": "91.0469px",
-            "height": "24.8906px",
+            "width": "66.2969px",
+            "height": "16.4844px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -4792,7 +4827,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 102.22,
               "height": 26
             },
@@ -4827,7 +4862,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 255.28,
+              "y": 251.08,
               "width": 51.97,
               "height": 26
             },
@@ -4862,7 +4897,7 @@
             "pseudo": null,
             "rect": {
               "x": 145,
-              "y": 293.28,
+              "y": 289.08,
               "width": 632,
               "height": 22.72
             },
@@ -5338,6 +5373,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": true,
         "createPreviewFallback": false,
@@ -6675,6 +6711,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": true,
@@ -7980,6 +8017,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": true,
@@ -8018,7 +8056,7 @@
               "x": 0,
               "y": 0,
               "width": 1380,
-              "height": 1337.09
+              "height": 1335.08
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "16px",
@@ -8037,7 +8075,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1380px",
-            "height": "1337.09px",
+            "height": "1335.08px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -8053,7 +8091,7 @@
               "x": 0,
               "y": 0,
               "width": 1380,
-              "height": 1337.09
+              "height": 1335.08
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -8072,7 +8110,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1380px",
-            "height": "1337.09px",
+            "height": "1335.08px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -8475,7 +8513,7 @@
               "x": 100,
               "y": 93,
               "width": 1180,
-              "height": 1162.89
+              "height": 1160.88
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -8494,7 +8532,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1180px",
-            "height": "1162.89px",
+            "height": "1160.88px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -8503,21 +8541,21 @@
             "transform": "none",
             "position": "static"
           },
-          ".dashboard-shell h1": {
+          ".dashboard-header h1": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 100,
               "y": 148.13,
               "width": 934.92,
-              "height": 35.67
+              "height": 33.66
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontFamily": "Anton, ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "33.66px",
-            "lineHeight": "35.6796px",
-            "fontWeight": "780",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "lineHeight": "33.66px",
+            "fontWeight": "400",
+            "letterSpacing": "0.5049px",
+            "textTransform": "uppercase",
             "color": "rgb(246, 236, 223)",
             "backgroundColor": "rgba(0, 0, 0, 0)",
             "backgroundImage": "none",
@@ -8529,8 +8567,43 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "934.922px",
-            "height": "35.6719px",
+            "height": "33.6562px",
             "display": "block",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "objectFit": "fill",
+            "opacity": "1",
+            "transform": "none",
+            "position": "static"
+          },
+          ".dashboard-header h1 span": {
+            "found": true,
+            "pseudo": null,
+            "rect": {
+              "x": 381.22,
+              "y": 139.13,
+              "width": 133.91,
+              "height": 51
+            },
+            "fontFamily": "Anton, ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "33.66px",
+            "lineHeight": "33.66px",
+            "fontWeight": "400",
+            "letterSpacing": "0.5049px",
+            "textTransform": "uppercase",
+            "color": "rgb(226, 18, 53)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "borderTopColor": "rgb(226, 18, 53)",
+            "borderTopWidth": "0px",
+            "borderRightColor": "rgb(226, 18, 53)",
+            "borderBottomColor": "rgb(226, 18, 53)",
+            "borderLeftColor": "rgb(226, 18, 53)",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "width": "auto",
+            "height": "auto",
+            "display": "inline",
             "alignItems": "normal",
             "justifyContent": "normal",
             "objectFit": "fill",
@@ -8543,7 +8616,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 548.36,
+              "y": 546.34,
               "width": 843.47,
               "height": 322
             },
@@ -8578,7 +8651,7 @@
             "pseudo": null,
             "rect": {
               "x": 117,
-              "y": 582.48,
+              "y": 580.47,
               "width": 137.5,
               "height": 20.78
             },
@@ -8620,6 +8693,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -8658,7 +8732,7 @@
               "x": 0,
               "y": 0,
               "width": 1380,
-              "height": 984.41
+              "height": 984.28
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "16px",
@@ -8677,7 +8751,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1380px",
-            "height": "984.406px",
+            "height": "984.281px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -8693,7 +8767,7 @@
               "x": 0,
               "y": 0,
               "width": 1380,
-              "height": 984.41
+              "height": 984.28
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -8712,7 +8786,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1380px",
-            "height": "984.406px",
+            "height": "984.281px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9083,7 +9157,7 @@
               "x": 100,
               "y": 93,
               "width": 1180,
-              "height": 810.2
+              "height": 810.08
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -9102,7 +9176,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1180px",
-            "height": "810.203px",
+            "height": "810.078px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9111,21 +9185,21 @@
             "transform": "none",
             "position": "static"
           },
-          ".profile-shell h1": {
+          ".profile-hero-copy h1": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 176,
               "y": 148.13,
               "width": 634.88,
-              "height": 35.67
+              "height": 33.66
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontFamily": "Anton, ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "33.66px",
-            "lineHeight": "35.6796px",
-            "fontWeight": "780",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "lineHeight": "33.66px",
+            "fontWeight": "400",
+            "letterSpacing": "0.5049px",
+            "textTransform": "uppercase",
             "color": "rgb(246, 236, 223)",
             "backgroundColor": "rgba(0, 0, 0, 0)",
             "backgroundImage": "none",
@@ -9137,7 +9211,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "634.875px",
-            "height": "35.6719px",
+            "height": "33.6562px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9186,7 +9260,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 506.81,
+              "y": 506.69,
               "width": 381.33,
               "height": 151.36
             },
@@ -9221,7 +9295,7 @@
             "pseudo": null,
             "rect": {
               "x": 117,
-              "y": 544.94,
+              "y": 544.81,
               "width": 168.55,
               "height": 26.8
             },
@@ -9251,10 +9325,7 @@
             "transform": "none",
             "position": "static"
           },
-          ".profile-tab-list a": {
-            "found": false
-          },
-          ".profile-tab-list a[aria-current=\"page\"]": {
+          ".profile-tabs button[aria-selected=\"true\"]": {
             "found": false
           }
         }
@@ -9263,6 +9334,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -9758,7 +9830,7 @@
               "x": 100,
               "y": 113,
               "width": 1180,
-              "height": 661.09
+              "height": 673.95
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -9777,7 +9849,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1180px",
-            "height": "661.094px",
+            "height": "673.953px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9793,7 +9865,7 @@
               "x": 100,
               "y": 171,
               "width": 1180,
-              "height": 547.09
+              "height": 559.95
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -9812,7 +9884,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1180px",
-            "height": "547.094px",
+            "height": "559.953px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9821,21 +9893,21 @@
             "transform": "none",
             "position": "relative"
           },
-          ".section-title-row h2": {
+          ".section-title-row h1": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 100,
               "y": 171,
               "width": 363.48,
-              "height": 23.34
+              "height": 36.2
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
-            "fontSize": "20.48px",
-            "lineHeight": "23.3472px",
-            "fontWeight": "740",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "fontFamily": "Anton, ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "36.2px",
+            "lineHeight": "36.2px",
+            "fontWeight": "400",
+            "letterSpacing": "0.543px",
+            "textTransform": "uppercase",
             "color": "rgb(246, 236, 223)",
             "backgroundColor": "rgba(0, 0, 0, 0)",
             "backgroundImage": "none",
@@ -9847,7 +9919,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "363.484px",
-            "height": "23.3438px",
+            "height": "36.2031px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -9856,12 +9928,12 @@
             "transform": "none",
             "position": "static"
           },
-          ".section-title-row a": {
+          ".section-title-row > a": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 475.48,
-              "y": 182.67,
+              "y": 189.09,
               "width": 804.52,
               "height": 22.89
             },
@@ -9871,14 +9943,14 @@
             "fontWeight": "800",
             "letterSpacing": "normal",
             "textTransform": "none",
-            "color": "rgb(226, 18, 53)",
+            "color": "rgb(217, 169, 78)",
             "backgroundColor": "rgba(0, 0, 0, 0)",
             "backgroundImage": "none",
-            "borderTopColor": "rgb(226, 18, 53)",
+            "borderTopColor": "rgba(217, 169, 78, 0.26)",
             "borderTopWidth": "0px",
-            "borderRightColor": "rgb(226, 18, 53)",
-            "borderBottomColor": "rgb(226, 18, 53)",
-            "borderLeftColor": "rgb(226, 18, 53)",
+            "borderRightColor": "rgba(217, 169, 78, 0.26)",
+            "borderBottomColor": "rgba(217, 169, 78, 0.26)",
+            "borderLeftColor": "rgba(217, 169, 78, 0.26)",
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "804.516px",
@@ -9896,7 +9968,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 229.23,
+              "y": 242.09,
               "width": 1180,
               "height": 488.86
             },
@@ -9931,7 +10003,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 229.23,
+              "y": 242.09,
               "width": 284.5,
               "height": 488.86
             },
@@ -9966,7 +10038,7 @@
             "pseudo": null,
             "rect": {
               "x": 116,
-              "y": 515.73,
+              "y": 528.59,
               "width": 252.5,
               "height": 22.81
             },
@@ -9995,6 +10067,41 @@
             "opacity": "1",
             "transform": "none",
             "position": "static"
+          },
+          ".ticker-mark-image": {
+            "found": true,
+            "pseudo": null,
+            "rect": {
+              "x": 112,
+              "y": 254.09,
+              "width": 260.5,
+              "height": 260.5
+            },
+            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "24.8px",
+            "lineHeight": "36.208px",
+            "fontWeight": "740",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "borderTopColor": "rgb(255, 255, 255)",
+            "borderTopWidth": "0px",
+            "borderRightColor": "rgb(255, 255, 255)",
+            "borderBottomColor": "rgb(255, 255, 255)",
+            "borderLeftColor": "rgb(255, 255, 255)",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "width": "260.5px",
+            "height": "260.5px",
+            "display": "block",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "objectFit": "cover",
+            "opacity": "1",
+            "transform": "none",
+            "position": "absolute"
           }
         },
         "discovery_shared": {
@@ -10005,7 +10112,7 @@
               "x": 100,
               "y": 113,
               "width": 1180,
-              "height": 661.09
+              "height": 673.95
             },
             "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "15.68px",
@@ -10024,7 +10131,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "1180px",
-            "height": "661.094px",
+            "height": "673.953px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -10047,7 +10154,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 229.23,
+              "y": 242.09,
               "width": 1180,
               "height": 488.86
             },
@@ -10082,7 +10189,7 @@
             "pseudo": null,
             "rect": {
               "x": 100,
-              "y": 229.23,
+              "y": 242.09,
               "width": 284.5,
               "height": 488.86
             },
@@ -10117,7 +10224,7 @@
             "pseudo": null,
             "rect": {
               "x": 116,
-              "y": 515.73,
+              "y": 528.59,
               "width": 252.5,
               "height": 22.81
             },
@@ -10152,7 +10259,7 @@
             "pseudo": null,
             "rect": {
               "x": 116,
-              "y": 515.73,
+              "y": 528.59,
               "width": 252.5,
               "height": 21.03
             },
@@ -10187,7 +10294,7 @@
             "pseudo": null,
             "rect": {
               "x": 116,
-              "y": 543.55,
+              "y": 556.41,
               "width": 252.5,
               "height": 34.94
             },
@@ -10222,7 +10329,7 @@
             "pseudo": null,
             "rect": {
               "x": 116,
-              "y": 588.48,
+              "y": 601.34,
               "width": 45.47,
               "height": 15.94
             },
@@ -10257,7 +10364,7 @@
             "pseudo": null,
             "rect": {
               "x": 171.47,
-              "y": 588.48,
+              "y": 601.34,
               "width": 197.03,
               "height": 17.73
             },
@@ -10287,15 +10394,47 @@
             "transform": "none",
             "position": "static"
           },
-          ".open-link": {
-            "found": false
+          ".card-open-row a": {
+            "found": true,
+            "pseudo": null,
+            "rect": {
+              "x": 318.23,
+              "y": 697.28,
+              "width": 50.27,
+              "height": 18.67
+            },
+            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "12.8px",
+            "lineHeight": "18.688px",
+            "fontWeight": "900",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "color": "rgb(255, 245, 226)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "borderTopColor": "rgb(255, 245, 226)",
+            "borderTopWidth": "0px",
+            "borderRightColor": "rgb(255, 245, 226)",
+            "borderBottomColor": "rgb(255, 245, 226)",
+            "borderLeftColor": "rgb(255, 245, 226)",
+            "borderRadius": "6px",
+            "boxShadow": "none",
+            "width": "50.2656px",
+            "height": "18.6719px",
+            "display": "block",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "objectFit": "fill",
+            "opacity": "1",
+            "transform": "none",
+            "position": "static"
           },
           ".ticker-mark": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 111,
-              "y": 240.23,
+              "y": 253.09,
               "width": 262.5,
               "height": 262.5
             },
@@ -10330,7 +10469,7 @@
             "pseudo": "::before",
             "rect": {
               "x": 111,
-              "y": 240.23,
+              "y": 253.09,
               "width": 262.5,
               "height": 262.5
             },
@@ -10366,7 +10505,7 @@
             "pseudo": "::after",
             "rect": {
               "x": 111,
-              "y": 240.23,
+              "y": 253.09,
               "width": 262.5,
               "height": 262.5
             },
@@ -10402,7 +10541,7 @@
             "pseudo": null,
             "rect": {
               "x": 112,
-              "y": 241.23,
+              "y": 254.09,
               "width": 260.5,
               "height": 260.5
             },
@@ -10437,7 +10576,7 @@
             "pseudo": null,
             "rect": {
               "x": 112,
-              "y": 241.23,
+              "y": 254.09,
               "width": 18.23,
               "height": 260.5
             },
@@ -10472,7 +10611,7 @@
             "pseudo": null,
             "rect": {
               "x": 354.27,
-              "y": 241.23,
+              "y": 254.09,
               "width": 18.23,
               "height": 260.5
             },
@@ -10507,7 +10646,7 @@
             "pseudo": null,
             "rect": {
               "x": 123,
-              "y": 256.23,
+              "y": 269.09,
               "width": 100.95,
               "height": 22
             },
@@ -10542,7 +10681,7 @@
             "pseudo": null,
             "rect": {
               "x": 305.84,
-              "y": 256.23,
+              "y": 269.09,
               "width": 55.66,
               "height": 22
             },
@@ -10629,6 +10768,7 @@
         ],
         "tickerMarksWithImage": 3,
         "tickerMarksFallback": 0,
+        "searchImageCards": 3,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -11120,21 +11260,21 @@
             "transform": "none",
             "position": "static"
           },
-          ".terms-shell h1": {
+          ".terms-header h1": {
             "found": true,
             "pseudo": null,
             "rect": {
               "x": 100,
               "y": 148.13,
               "width": 852.94,
-              "height": 35.67
+              "height": 33.66
             },
-            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
+            "fontFamily": "Anton, ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Display\", Inter, \"Segoe UI\", sans-serif",
             "fontSize": "33.66px",
-            "lineHeight": "35.6796px",
-            "fontWeight": "780",
-            "letterSpacing": "normal",
-            "textTransform": "none",
+            "lineHeight": "33.66px",
+            "fontWeight": "400",
+            "letterSpacing": "0.5049px",
+            "textTransform": "uppercase",
             "color": "rgb(246, 236, 223)",
             "backgroundColor": "rgba(0, 0, 0, 0)",
             "backgroundImage": "none",
@@ -11146,7 +11286,7 @@
             "borderRadius": "0px",
             "boxShadow": "none",
             "width": "852.938px",
-            "height": "35.6719px",
+            "height": "33.6562px",
             "display": "block",
             "alignItems": "normal",
             "justifyContent": "normal",
@@ -11225,11 +11365,40 @@
             "transform": "none",
             "position": "static"
           },
-          ".terms-tabs a": {
-            "found": false
-          },
-          ".terms-tabs a[aria-current=\"page\"]": {
-            "found": false
+          ".terms-anchor-row a": {
+            "found": true,
+            "pseudo": null,
+            "rect": {
+              "x": 100,
+              "y": 222.77,
+              "width": 54.05,
+              "height": 36
+            },
+            "fontFamily": "ui-sans-serif, -apple-system, \"system-ui\", \"SF Pro Text\", Inter, \"Segoe UI\", sans-serif",
+            "fontSize": "13.76px",
+            "lineHeight": "13.76px",
+            "fontWeight": "700",
+            "letterSpacing": "normal",
+            "textTransform": "none",
+            "color": "rgb(246, 236, 223)",
+            "backgroundColor": "rgb(28, 10, 14)",
+            "backgroundImage": "none",
+            "borderTopColor": "rgba(217, 169, 78, 0.24)",
+            "borderTopWidth": "1px",
+            "borderRightColor": "rgba(217, 169, 78, 0.24)",
+            "borderBottomColor": "rgba(217, 169, 78, 0.24)",
+            "borderLeftColor": "rgba(217, 169, 78, 0.24)",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "width": "54.0469px",
+            "height": "36px",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "normal",
+            "objectFit": "fill",
+            "opacity": "1",
+            "transform": "none",
+            "position": "static"
           }
         }
       },
@@ -11237,6 +11406,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
@@ -11941,6 +12111,7 @@
         "discoveryCardTickers": [],
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
+        "searchImageCards": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
