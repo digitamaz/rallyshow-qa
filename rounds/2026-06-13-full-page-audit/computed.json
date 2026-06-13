@@ -11,7 +11,7 @@
       "HTTP1",
       "RECOV1"
     ],
-    "fixtureImagePolicy": "VMC image null; P803564/HTTP1/RECOV1 review-safe posters"
+    "fixtureImagePolicy": "VMC image null; P803564/HTTP1/RECOV1 use /ux-review/test-show-representative.jpg and are decode-verified before screenshot"
   },
   "pages": {
     "discovery--impl.png": {
@@ -1382,11 +1382,32 @@
         "tickerMarksWithImage": 3,
         "tickerMarksFallback": 1,
         "searchImageCards": 0,
+        "decodedImages": 3,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        },
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        },
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        }
+      ],
       "path": "/",
       "referenceHeight": 985,
       "captureOrdering": {
@@ -2768,11 +2789,20 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 1,
         "showHeroHasImage": true,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        }
+      ],
       "path": "/show/6bbd1516-2200-4e30-8ed5-e9336062a603",
       "referenceHeight": 2789,
       "captureOrdering": null
@@ -4119,11 +4149,20 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 1,
         "showHeroHasImage": true,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        }
+      ],
       "path": "/show/87d5243e-7c0d-47b5-a174-7b833b16acce",
       "referenceHeight": 1922,
       "captureOrdering": null
@@ -5374,11 +5413,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": true,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/show/7de1d44e-1832-4e2c-9a61-66f7a0b73e05",
       "referenceHeight": 1922,
       "captureOrdering": null
@@ -6712,11 +6753,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": true,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/create?mode=project",
       "referenceHeight": 1195,
       "captureOrdering": null
@@ -8018,11 +8061,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": true,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/create?mode=meme",
       "referenceHeight": 1216,
       "captureOrdering": null
@@ -8694,11 +8739,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/dashboard",
       "referenceHeight": 1038,
       "captureOrdering": null
@@ -9335,11 +9382,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/profile/<walletAddress>",
       "referenceHeight": 940,
       "captureOrdering": null
@@ -10769,11 +10818,32 @@
         "tickerMarksWithImage": 3,
         "tickerMarksFallback": 0,
         "searchImageCards": 3,
+        "decodedImages": 3,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        },
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        },
+        {
+          "src": "/ux-review/test-show-representative.jpg",
+          "complete": true,
+          "naturalWidth": 573,
+          "naturalHeight": 349
+        }
+      ],
       "path": "/search?q=HTTP",
       "referenceHeight": 940,
       "captureOrdering": null
@@ -11407,11 +11477,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/terms",
       "referenceHeight": 1100,
       "captureOrdering": null
@@ -12112,11 +12184,13 @@
         "tickerMarksWithImage": 0,
         "tickerMarksFallback": 0,
         "searchImageCards": 0,
+        "decodedImages": 0,
         "showHeroHasImage": false,
         "showHeroFallback": false,
         "createPreviewFallback": false,
         "createPreviewHasImage": false
       },
+      "imageResults": [],
       "path": "/not-a-real-route-for-audit",
       "referenceHeight": 900,
       "captureOrdering": null

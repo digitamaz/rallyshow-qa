@@ -14,7 +14,8 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 | Motion | `prefers-reduced-motion: reduce` |
 | Interaction state | Rest state, no hover/focus |
 | Discovery fixture order | P803564 -> VMC -> HTTP1 -> RECOV1 |
-| Fixture image policy | VMC image is null; P803564, HTTP1, RECOV1 use distinct review-safe posters |
+| Fixture image policy | VMC image is null; P803564, HTTP1, RECOV1 use `/ux-review/test-show-representative.jpg` |
+| Image verification | Capture waits for relevant poster images to decode and records natural dimensions in `computed.json` |
 | App logic | No production sorting, money-path, wallet, donation, or workspace logic changed for this round |
 
 ## Source-to-Implementation Mapping
@@ -37,13 +38,18 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 
 | Area | Change | Verification point |
 | --- | --- | --- |
-| Protocol | Added permanent QA evidence protocol to `AGENTS.md` | Future rounds require QA repo push, manifest, raw path, measured evidence, and no close before review pass |
-| Section H1 typography | Search, Dashboard, Profile, Terms page-level section H1s use Anton uppercase | `computed.json` font family and text transform |
-| Dashboard H1 emphasis | `AND WORK` is red with red glow | `dashboard--impl.png` and computed span color |
-| Fixture images | P803564, HTTP1, RECOV1 retain review-safe poster images; VMC remains image-null | `computed.json` image/fallback audit signals |
-| Show mode chip | Show Detail hero mode chip renders uppercase JetBrains Mono and brass fill | `show-project--impl.png` and computed mode chip styles |
-| Search utility link | Search `Clear search` uses gold token family | `search--impl.png` and computed link color |
+| Poster fixture | Replaced beam-like placeholder poster paths with repo sample poster path for P803564, HTTP1, RECOV1 | Discovery/Search cards and Show Project/Donation heroes show decoded poster image |
+| VMC fallback | VMC remains `imageUrl=null` | VMC card and Show Meme hero use closed-curtain fallback only |
+| Image decode wait | Capture waits for poster image decode before screenshot | `computed.json` includes `imageResults` and `decodedImages` audit signals |
+
+## Image Render Confirmation
+
+- `discovery--impl.png`: first four cards are P803564, VMC, HTTP1, RECOV1; P803564/HTTP1/RECOV1 have decoded poster images and VMC is the only fallback.
+- `show-project--impl.png`: hero poster image is decoded and fills the 236x236 image frame inside the 290px tile.
+- `show-donation--impl.png`: hero poster image is decoded and fills the 236x236 image frame.
+- `show-meme--impl.png`: VMC intentionally remains fallback.
+- `search--impl.png`: visible result cards use decoded poster images.
 
 ## Forbidden-Area Contact Check
 
-No forbidden logic files were intentionally edited. Touched app files are limited to `AGENTS.md`, Search/Dashboard/Show Detail presentational markup, and CSS for Discovery/Dashboard/Profile/Terms/Show styling. TradePanel state machine, Create draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy were not changed.
+No forbidden logic components were edited. This revision changes local fixture image URLs and capture evidence only; TradePanel state machine, Create draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy were not changed.

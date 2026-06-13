@@ -576,3 +576,26 @@ Forbidden-area contact check:
 - No forbidden logic components were edited.
 - Expected grep references only: `show/[showId]/page.tsx` still imports TradePanel, DonationPanel, ProjectWorkspacePanel, ReportPanel, and RestrictedShow, but the only markup change there is the mode-chip display text. `show.css` still contains existing mission-claim style selectors; no mission, donation, wallet, trade, workspace, or report logic changed.
 - CreateClient and TradePanel files were not edited.
+
+
+## 2026-06-13 Full Page rsF Audit Round — Delta Fix 02 Image Restore
+
+Status: updated for B-only image render review.
+
+Round: `rounds/2026-06-13-full-page-audit/`
+Raw base: `https://raw.githubusercontent.com/digitamaz/rallyshow-qa/main/rounds/2026-06-13-full-page-audit/`
+
+Issue fixed:
+- Previous review-safe poster PNGs were visually beam-like and looked like fallback even though `img` tags existed.
+- Local capture fixture now points P803564, HTTP1, and RECOV1 to the repo sample poster path `/ux-review/test-show-representative.jpg`.
+- VMC remains `imageUrl=null` and is the only intentional closed-curtain fallback.
+
+Verification evidence:
+- `/ux-review/test-show-representative.jpg` served HTTP 200 locally before capture.
+- Capture waits for poster `img.decode()`/load and records natural dimensions in `computed.json`.
+- `computed.json` records decoded image dimensions `573x349` for Discovery, Show Project, Show Donation, and Search.
+- Visual pre-push crop check confirmed: Discovery first row has 3 visible poster cards and VMC fallback only; Show Project hero has poster image filling the 236x236 image frame; Search result cards have visible poster images.
+
+Forbidden-area contact check:
+- No app logic files changed for this B fix. This update is fixture data plus refreshed QA evidence only.
+- TradePanel, CreateClient, Phantom wallet, Donation routing/claim, Workspace payout/mission/treasury, ReportPanel, RestrictedShow, and legal copy were not touched.
