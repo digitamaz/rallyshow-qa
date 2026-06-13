@@ -637,3 +637,30 @@ Verification:
 Forbidden-area contact check:
 - CSS only. No app logic files were edited for this delta.
 - TradePanel state machine, CreateClient draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy were not touched.
+
+
+## 2026-06-13 Meteora DBC Research Round
+
+Status: submitted for Claude review.
+
+Round: `rounds/2026-06-13-meteora-dbc-research/`
+Raw base: `https://raw.githubusercontent.com/digitamaz/rallyshow-qa/main/rounds/2026-06-13-meteora-dbc-research/`
+
+Scope:
+- Existing Rally Show records were checked before new research.
+- New research uses Meteora official docs plus the public `MeteoraAg/dynamic-bonding-curve` source at commit `b4f954733f0e88258f1eb3f0eff75e4314c9610c`.
+- No Rally Show app code was changed.
+
+Files:
+- `meteora-dbc-research.md`
+- `source-sweep.md`
+- `manifest.md`
+
+Key findings:
+- DBC has native partner/creator fee-sharing primitives, but Rally's exact `1.0% / 0.5%` production routing remains unapproved until rounding, authority, Project/Donation routing, and post-migration behavior are proven.
+- Bonding-curve values, migration threshold, token standard, LP policy, pool creation fee, and first-buy minimum remain owner/product decisions rather than finalized launch constants.
+- SPL vs Token-2022 remains open; public DBC source supports both initialization paths but constrains `MeteoraDamm` migration to SPL token.
+
+Forbidden-area contact check:
+- Documentation-only QA repo change.
+- No TradePanel, CreateClient, Phantom wallet, Donation, Workspace, ReportPanel, RestrictedShow, legal copy, adapter, or app logic files were edited.
