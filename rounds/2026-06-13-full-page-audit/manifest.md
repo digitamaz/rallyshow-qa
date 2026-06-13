@@ -41,6 +41,8 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 | Poster fixture | Replaced beam-like placeholder poster paths with repo sample poster path for P803564, HTTP1, RECOV1 | Discovery/Search cards and Show Project/Donation heroes show decoded poster image |
 | VMC fallback | VMC remains `imageUrl=null` | VMC card and Show Meme hero use closed-curtain fallback only |
 | Image decode wait | Capture waits for poster image decode before screenshot | `computed.json` includes `imageResults` and `decodedImages` audit signals |
+| Panel section typography | Dashboard and Show Detail panel section titles use Anton uppercase | `dashboard--impl.png`, `show-project--impl.png`, `show-donation--impl.png`; computed selectors include `.dashboard-panel h2`, `.market-head h2`, `.mode-summary-panel h2`, `.donation-panel h2` |
+| Panel meta-label typography | Dashboard summary/table labels and Show Detail eyebrow/summary/trade labels use JetBrains Mono uppercase with wide tracking | `computed.json` selectors include `.dashboard-summary-tile > span`, `.dashboard-wallet-strip > div > span`, `.summary-row > span`, `.trade-amount-field > span`, `.trade-card-market > span` |
 
 ## Image Render Confirmation
 
@@ -49,6 +51,9 @@ Note: `docs/design-reference/mockups/` is not present in the local app repo snap
 - `show-donation--impl.png`: hero poster image is decoded and fills the 236x236 image frame.
 - `show-meme--impl.png`: VMC intentionally remains fallback.
 - `search--impl.png`: visible result cards use decoded poster images.
+- `dashboard--impl.png`: panel section headings such as Token positions/Payout readiness render as Anton uppercase; wallet/summary/table labels render as mono uppercase tracking.
+- `show-project--impl.png`: Market/At a glance/public section titles render as Anton uppercase; summary rows and trade labels render as mono uppercase tracking.
+- `show-donation--impl.png`: Donation and shared Show Detail panel titles/labels follow the same Anton/JBM split.
 
 ## Forbidden-Area Contact Check
 

@@ -599,3 +599,41 @@ Verification evidence:
 Forbidden-area contact check:
 - No app logic files changed for this B fix. This update is fixture data plus refreshed QA evidence only.
 - TradePanel, CreateClient, Phantom wallet, Donation routing/claim, Workspace payout/mission/treasury, ReportPanel, RestrictedShow, and legal copy were not touched.
+
+
+## 2026-06-13 Full Page rsF Audit Round — Delta Fix 03 Panel Typography
+
+Status: updated for panel heading/meta-label computed review.
+
+Round: `rounds/2026-06-13-full-page-audit/`
+Raw base: `https://raw.githubusercontent.com/digitamaz/rallyshow-qa/main/rounds/2026-06-13-full-page-audit/`
+
+Issue fixed:
+- Dashboard panel section titles and Show Detail panel titles/labels were still leaking Inter/default casing in some internal panel surfaces.
+- Applied DESIGN_REFERENCE §03 rule: panel section titles use Anton uppercase; panel eyebrow/meta labels use JetBrains Mono uppercase with wide tracking; body/value text remains Inter.
+
+App files changed:
+- `apps/web/src/app/dashboard/dashboard.css`
+- `apps/web/src/app/show/show.css`
+
+Evidence refreshed:
+- `dashboard--impl.png`
+- `show-project--impl.png`
+- `show-donation--impl.png`
+- `computed.json`
+- `manifest.md`
+
+Computed checkpoints:
+- `.dashboard-panel h2`: Anton stack, `text-transform: uppercase`.
+- `.dashboard-summary-tile > span`: JetBrains Mono stack, `text-transform: uppercase`, wide tracking.
+- `.market-head h2`: Anton stack, `text-transform: uppercase`.
+- `.summary-row > span`: JetBrains Mono stack, `text-transform: uppercase`, wide tracking.
+
+Verification:
+- `pnpm --filter @rally-show/web typecheck` passed.
+- Visual check confirmed Dashboard headings such as Token positions/Payout readiness render as uppercase display titles.
+- Visual check confirmed Show Detail Market/At a glance/Project/Donation public section titles and summary labels follow the Anton/JBM split.
+
+Forbidden-area contact check:
+- CSS only. No app logic files were edited for this delta.
+- TradePanel state machine, CreateClient draft/activation/first-buy boundary, Phantom wallet boundary, Donation routing/claim, Workspace payout/treasury/mission authority, ReportPanel, RestrictedShow, and legal copy were not touched.
